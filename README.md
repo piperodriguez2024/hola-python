@@ -62,7 +62,7 @@ Steam Deck + Ubuntu (Distrobox)
 | 02 | Git, GitHub y SSH | Completado |
 | 03 | Documentacion y pruebas | Completado |
 | 04 | CI con GitHub Actions | Completado |
-| 05 | DevSecOps y seguridad | Pendiente |
+| 05 | DevSecOps y seguridad | Completado |
 | 06 | Ramas y Pull Requests | Pendiente |
 | 07 | API REST con FastAPI | Pendiente |
 | 08 | Contenedores Podman | Pendiente |
@@ -128,6 +128,65 @@ Caracteristicas:
 - Ejecucion automatica de unittest
 
 [Ver ejecuciones CI](https://github.com/piperodriguez2024/hola-python/actions)
+
+
+### Hito 05 - DevSecOps y seguridad automatizada
+
+**Objetivo:** Integrar controles de seguridad
+en el ciclo de desarrollo Python.
+
+#### Controles implementados
+
+| Control | Herramienta | Resultado |
+|---|---|---|
+| Pruebas unitarias | unittest | PASS |
+| Analisis estatico SAST | Bandit | PASS |
+| Auditoria de paquetes | pip-audit | PASS |
+
+#### Remediacion de vulnerabilidades
+
+Durante la auditoria local se detectaron
+12 registros de vulnerabilidad en pip 24.0,
+incluidos identificadores repetidos.
+
+Acciones realizadas:
+
+1. Identificacion con pip-audit.
+2. Actualizacion de pip 24.0 a 26.3.
+3. Nueva auditoria sin hallazgos conocidos.
+4. Validacion de las tres pruebas unitarias.
+
+La actualizacion se realizo exclusivamente
+dentro del entorno virtual Python.
+
+#### Integracion continua
+
+El pipeline ejecuta tres trabajos:
+
+- Pruebas unitarias
+- Analisis de seguridad SAST
+- Auditoria de dependencias del runner
+
+La auditoria actual del runner no sustituye
+una auditoria especifica de las dependencias
+de la aplicacion. Esta se incorporara cuando
+el proyecto tenga dependencias declaradas.
+
+**Resultado:** Python CI #4 exitoso
+en 14 segundos.
+
+**Commit:** 62d02cb
+
+[Ver ejecuciones de seguridad](https://github.com/piperodriguez2024/hola-python/actions)
+
+#### Competencias demostradas
+
+- DevSecOps
+- SAST con Bandit
+- Auditoria de vulnerabilidades
+- Remediacion de dependencias
+- Seguridad integrada en CI
+- Validacion automatizada
 
 ## Evidencias
 
