@@ -1,17 +1,20 @@
 # Hola Python
 
-Mi primer proyecto Python desarrollado desde una Steam Deck LCD.
+Mi primer proyecto Python desarrollado en
+Steam Deck con Ubuntu 24.04 y Distrobox.
 
-## Entorno de desarrollo
-- SteamOS
-- Ubuntu 24.04 mediante Distrobox
+## Descripcion
+Programa interactivo que saluda al usuario.
+
+## Tecnologias
 - Python 3
-- Git y GitHub mediante SSH
+- Git y GitHub
+- Ubuntu 24.04
+- Distrobox
 
-## Ejecutar el proyecto
-```bash
+## Ejecucion
 python3 main.py
-```
 
-## Resultado esperado
-Hola IA desde mi Steam Deck
+## Objetivo
+Aprender desarrollo Python, Git y
+automatizacion paso a paso.

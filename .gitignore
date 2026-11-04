@@ -1,4 +1,19 @@
+# Entornos virtuales
 .venv/
+venv/
+
+# Archivos temporales de Python
 __pycache__/
-*.py[cod]
+*.pyc
+.pytest_cache/
+
+# Variables privadas
 .env
+.env.*
+
+# Archivos del editor
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
