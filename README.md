@@ -63,7 +63,7 @@ Steam Deck + Ubuntu (Distrobox)
 | 03 | Documentacion y pruebas | Completado |
 | 04 | CI con GitHub Actions | Completado |
 | 05 | DevSecOps y seguridad | Completado |
-| 06 | Ramas y Pull Requests | Pendiente |
+| 06 | Ramas y Pull Requests | Completado |
 | 07 | API REST con FastAPI | Pendiente |
 | 08 | Contenedores Podman | Pendiente |
 | 09 | Kubernetes local | Pendiente |
@@ -187,6 +187,46 @@ en 14 segundos.
 - Remediacion de dependencias
 - Seguridad integrada en CI
 - Validacion automatizada
+
+
+### Hito 06 - Git avanzado y Pull Requests
+
+**Objetivo:** Implementar un flujo profesional
+de desarrollo basado en ramas y revisiones.
+
+#### Implementaciones
+
+- Rama feature/hito-06-flujo-pr
+- Desarrollo independiente de main
+- Commit y publicacion de rama remota
+- Creacion del Pull Request #1
+- Revision de cambios en GitHub
+- Integracion mediante merge
+
+#### Pruebas agregadas
+
+Archivo: tests/test_casos_borde.py
+
+- Validacion de nombres con espacios
+- Validacion de caracteres acentuados
+
+Resultado: 5 pruebas unitarias exitosas.
+
+#### Controles DevSecOps
+
+Todos los controles del PR fueron aprobados:
+
+- Pruebas unitarias
+- Bandit SAST
+- Auditoria de dependencias
+
+#### Evidencia
+
+[Pull Request #1](https://github.com/piperodriguez2024/hola-python/pull/1)
+
+**Competencias demostradas:**
+Git branching, Pull Requests, revision
+de codigo, merge y CI/CD.
 
 ## Evidencias
 
