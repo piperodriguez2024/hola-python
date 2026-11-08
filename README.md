@@ -64,7 +64,7 @@ Steam Deck + Ubuntu (Distrobox)
 | 04 | CI con GitHub Actions | Completado |
 | 05 | DevSecOps y seguridad | Completado |
 | 06 | Ramas y Pull Requests | Completado |
-| 07 | API REST con FastAPI | Pendiente |
+| 07 | API REST con FastAPI | Completado |
 | 08 | Contenedores Podman | Pendiente |
 | 09 | Kubernetes local | Pendiente |
 | 10 | Prometheus y Grafana | Pendiente |
@@ -227,6 +227,118 @@ Todos los controles del PR fueron aprobados:
 **Competencias demostradas:**
 Git branching, Pull Requests, revision
 de codigo, merge y CI/CD.
+
+
+### Hito 07 - API REST con FastAPI
+
+**Objetivo:** Transformar el programa Python
+en un servicio HTTP con documentacion OpenAPI,
+pruebas automatizadas y controles DevSecOps.
+
+#### Arquitectura
+
+Cliente HTTP
+    |
+    v
+FastAPI (api.py)
+    |
+    +-- GET /
+    +-- GET /health
+    +-- GET /saludo/{nombre}
+    |
+    v
+Funciones Python (main.py)
+    |
+    v
+Respuestas JSON
+
+#### Endpoints implementados
+
+| Metodo | Ruta | Descripcion |
+|---|---|---|
+| GET | / | Informacion del laboratorio |
+| GET | /health | Estado de la API |
+| GET | /saludo/{nombre} | Saludo personalizado |
+
+#### Tecnologias
+
+- Python 3.12
+- FastAPI
+- Uvicorn
+- unittest
+- TestClient
+- OpenAPI y Swagger
+- GitHub Actions
+- Bandit y pip-audit
+
+#### Ejecucion local
+
+Instalar dependencias:
+
+`python -m pip install -r requirements-dev.txt`
+
+Iniciar el servidor local:
+
+`python -m uvicorn api:app --host 127.0.0.1 --port 8000`
+
+Documentacion disponible mientras el servidor
+este funcionando:
+
+- Swagger UI: http://127.0.0.1:8000/docs
+- OpenAPI: http://127.0.0.1:8000/openapi.json
+
+#### Pruebas automatizadas
+
+Se agregaron cuatro pruebas de API:
+
+- test_inicio
+- test_health
+- test_saludo
+- test_ruta_inexistente
+
+Resultado local: 9 pruebas exitosas.
+
+Comando:
+
+`python -m unittest discover -s tests -v`
+
+#### Validacion OpenAPI
+
+Se verificaron los endpoints de documentacion:
+
+- GET /docs
+- GET /openapi.json
+
+Ambas rutas respondieron HTTP 200 mediante
+TestClient.
+
+#### Seguridad y DevSecOps
+
+Controles integrados en GitHub Actions:
+
+- Pruebas automatizadas
+- Analisis estatico SAST con Bandit
+- Auditoria de dependencias con pip-audit
+
+Los tres controles aprobaron el Pull Request #3.
+
+La auditoria local de dependencias declaradas
+no detecto vulnerabilidades conocidas.
+
+#### Evidencias
+
+[Pull Request #3 - Implementacion FastAPI](https://github.com/piperodriguez2024/hola-python/pull/3)
+
+[GitHub Actions](https://github.com/piperodriguez2024/hola-python/actions)
+
+#### Competencias demostradas
+
+- Desarrollo de servicios REST
+- Manejo de respuestas JSON
+- Documentacion OpenAPI
+- Testing automatizado de APIs
+- Gestion de dependencias
+- Integracion continua y DevSecOps
 
 ## Evidencias
 
